@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <unistd.h>
 /**
  * main - Entry point
  *
@@ -7,6 +7,6 @@
 int main(void)
 {
 	char *mess = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
-	 write(2, mess, 59);
-	return (0);
+	 write(2, mess, 63);
+	return (1);
 }
