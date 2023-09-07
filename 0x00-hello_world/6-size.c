@@ -1,10 +1,12 @@
 #include <stdio.h>
 /**
  * main - Entry point
- * Description - main
+ *
  * Return: Always 0 (Success)
  */
-sizeof(main) {
+int main(void)
+{
+	printf("Holberton School");
 	return (0);
 }
 
