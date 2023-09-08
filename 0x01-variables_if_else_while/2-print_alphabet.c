@@ -9,5 +9,8 @@ int main(void)
 	char alp;
 
 	for (alp="a";alp <= "z"; alp++)
+	{
+		putchar("%c" );
+	}
 	return (0);
 	}
