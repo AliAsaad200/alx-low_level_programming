@@ -8,11 +8,13 @@ int main(void)
 {
 	int alp;
 
-	for (alp = 0; alp <= 9 ; alp++)
+	for (alp = 0; alp <= 9 ; alp++){
 		putchar(alp + 48);
-
 	putchar(',');
+	putchar(' ');
+	
 
+	}
 	putchar('\n');
 	return (0);
 }
