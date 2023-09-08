@@ -6,7 +6,7 @@
  */
 int main(void)
 {
-	char alp;
+	int alp;
 
 	for (alp = 0; alp <= 9 ; alp++)
 		putchar(alp);
