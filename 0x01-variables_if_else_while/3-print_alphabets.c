@@ -12,7 +12,7 @@ int main(void)
 	for (alp = 'a'; alp <= 'z'; alp++)
 		putchar(alp);
 	for (ALP = 'A'; ALP <= 'Z'; ALP++)
-
+		putchar(ALP);
 	putchar('\n');
 	return (0);
 }
