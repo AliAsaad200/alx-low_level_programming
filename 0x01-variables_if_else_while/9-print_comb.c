@@ -9,7 +9,7 @@ int main(void)
 	char alp;
 
 	for (alp = 0; alp <= 9 ; alp++)
-		putchar(alp + "0");
+		putchar(alp);
 
 	putchar(',');
 
