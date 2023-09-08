@@ -15,6 +15,6 @@ int main(void)
 		c = alp[i];
 		putchar(c);
 
-	} putchar("\n");
+	} putchar('\n');
 	return (0);
 }
