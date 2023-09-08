@@ -9,8 +9,8 @@ int main(void)
 	int alp;
 
 	for (alp = 0; alp < 10 ; alp++)
-		putchar(alp + '0');
+		printf("%d", alp);
 
-	putchar('\n');
+	printf("\n");
 	return (0);
 }
