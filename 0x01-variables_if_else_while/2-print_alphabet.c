@@ -6,11 +6,8 @@
  */
 int main(void)
 {
-	char alp = "a";
+	char alp;
 
-	while (alp <= "z")
-	{
-		putchar("%c ");
-	}
+	for (alp="a";alp <= "z"; alp++)
 	return (0);
 	}
