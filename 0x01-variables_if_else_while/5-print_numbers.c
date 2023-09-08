@@ -8,7 +8,7 @@ int main(void)
 {
 	int alp;
 
-	for (alp = 0; alp <= 9 ; alp++)
+	for (alp = 0; alp < 10 ; alp++)
 		printf("%d", alp);
 	return (0);
 }
