@@ -10,5 +10,7 @@ int main(void)
 
 	for (alp = 0; alp < 10 ; alp++)
 		printf("%d", alp);
+
+		printf("\n");
 	return (0);
 }
