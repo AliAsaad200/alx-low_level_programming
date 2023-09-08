@@ -9,6 +9,6 @@ int main(void)
 	int alp;
 
 	for (alp = 0; alp <= 9 ; alp++)
-		printf("%d" , alp);
+		printf("%d", alp);
 	return (0);
 }
