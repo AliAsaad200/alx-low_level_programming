@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- *_islower(int c) - Entry point
+ *_islower - Entry point
  *@c: The loweer to checked
  * Return: Always 0 (Success)
  */
