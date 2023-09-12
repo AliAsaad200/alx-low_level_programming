@@ -1,10 +1,10 @@
 #include "main.h"
 /**
- *int _abs - Entry point
+ *int_abs - Entry point
  *@n: The loweer to checked
  * Return: Always 0 (Success)
  */
-int int _abs(int n)
+int int_abs(int n)
 {
 	if (n < 0)
 	{
