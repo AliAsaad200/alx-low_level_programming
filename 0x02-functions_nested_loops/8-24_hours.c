@@ -8,15 +8,13 @@ void jack_bauer(void)
 {
 	int min;
 	int hr;
-
-		for (min = 0; min <= 59; min++)
-		{
-			_putchar(min + '0');
-			for (hr = 0; hr < 24; hr++)
+		for (hr = 0; hr < 24; hr++)
 			{
 				_putchar(hr + '0');
 				_putchar(':');
+				for (min = 0; min <= 59; min++)
+			{
+				_putchar(min + '0');
 			}
-			_putchar('\n');
-		}
+		}			
 }
