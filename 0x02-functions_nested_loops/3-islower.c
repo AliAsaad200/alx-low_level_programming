@@ -4,7 +4,7 @@
  *
  * Return: Always 0 (Success)
  */
-int _islower(int C);
+int _islower(int C)
 {
 	int c;
 
