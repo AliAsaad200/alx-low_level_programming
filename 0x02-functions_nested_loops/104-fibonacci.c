@@ -1,31 +1,50 @@
 #include <stdio.h>
 /**
- * main - 50 fibonacci numbers
+ * main - Prints the first 98 Fibonacci numbers
  *
- * Return: (0)
+ * Return: Always 0.
  */
+
 int main(void)
 {
-	long first = 1;
-	long second = 2;
-	long count = 2;
+	int Counter, Checked1, Checked2;
+	long int Num1, Num2, Num3, Num4, Num5, Num6;
 
-	printf("%lu, %lu, ", first, second);
-
-	while (count < 98)
+	Num1 = 1;
+	Num2 = 2;
+	Checked1 =  Checked2 = 1;
+	printf("%ld, %ld", Num1, Num2);
+	for (Counter = 0; Counter < 96; Counter++)
 	{
-	long next = first + second;
-
-	printf("%lu", next);
-	if (count < 97)
-	{
-		printf(", ");
-	}
-	first = second;
-	second = next;
-	count++;
+		if (Checked1)
+		{
+			Num3 = Num1 + Num2;
+			printf(", %ld", Num3);
+			Num1 = Num2;
+			Num2 = Num3;
+		}
+		else
+		{
+			if (Checked2)
+			{
+				Num5 = Num1 % 1000000000;
+				Num6 = Num2 % 1000000000;
+				Num1 = Num1 / 1000000000;
+				Num2 = Num2 / 1000000000;
+				Checked2 = 0;
+			}
+			Num4 = (Num5 + Num6);
+			Num3 = Num1 + Num2 + (Num4 / 1000000000);
+			printf(", %ld", Num3);
+			printf("%ld", Num4 % 1000000000);
+			Num1 = Num2;
+			Num5 = Num6;
+			Num2 = Num3;
+			Num6 = (Num4 % 1000000000);
+		}
+		if (((Num1 + Num2) < 0) && Checked1 == 1)
+			Checked1 = 0;
 	}
 	printf("\n");
-
 	return (0);
 }
