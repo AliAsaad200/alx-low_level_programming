@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  *print_sign - Entry point
- *@c: The loweer to checked
+ *@n: The loweer to checked
  * Return: Always 0 (Success)
  */
 int print_sign(int n)
