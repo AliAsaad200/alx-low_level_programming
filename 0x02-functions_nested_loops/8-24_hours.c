@@ -13,18 +13,7 @@ void jack_bauer(void)
 		{
 			for (min = 0; min <= 59; min++)
 			{
-				if (min == 59)
-				{
-					hr++
-					min = 0;
-				}
-				else 
-				{
-					_putchar(min + '0');
-				}
-				_putchar(hr + '0');
-				_putchar('\n');
-
+				_putchar(min + '0')
 			}
 		}	
 }
