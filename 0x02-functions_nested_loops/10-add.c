@@ -4,11 +4,7 @@
  *@c: The loweer to checked
  * Return: Always 0 (Success)
  */
-int add(int, int)
+int add(int a, int b)
 {
-	int a;
-	int b;
-	int result;
-	result = a + b ;
-	return (0);
+	return (a + b);
 }
