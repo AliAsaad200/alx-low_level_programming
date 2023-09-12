@@ -5,26 +5,21 @@
  * Return: (0)
  */
 int main(void)
-	{
-	int first = 1;
-	int second = 1;
-	int next = 0;
-	int sum = 0;
+{
+	int num1 = 1;
+	int num2 = 2;
+	int num3 = 0;
+	long Sum;
 
-	while (1)
+	while (num2 < 4000000)
 	{
-	next = first + second;
+	if (num2 % 2 == 0)
+		num3 += num2;
 
-	if (next > 4000000)
-	{
-		break;
+	Sum = num2;
+	num2 += num1;
+	num1 = Sum;
 	}
-	if (next % 2 == 0)
-	{
-		sum += next;
-	}
-	first = second;
-	second = next;
-	}
+	printf("%d\n", num3);
 	return (0);
 }
