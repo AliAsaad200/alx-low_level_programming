@@ -10,9 +10,11 @@ void print_times_table(int n)
   if (n > 15 || n < 0) {
     return;
   }
+	int row;
+	int col;
 
-  for (int row = 0; row <= n; row++) {
-    for (int col = 0; col <= n; col++) {
+  for ( row = 0; row <= n; row++) {
+    for (col = 0; col <= n; col++) {
       int result = row * col;
       printf("%d", result);
       if (col < n) {
