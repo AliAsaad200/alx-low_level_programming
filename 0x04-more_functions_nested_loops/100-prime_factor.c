@@ -7,15 +7,16 @@
  */
 int main(void)
 {
-	long long number = 612852475143;
-	long long largestPrime = -1;
+	long number = 612852475143;
+	long largestPrime = -1;
+	long i;
 
 	while (number % 2 == 0)
 	{
 	largestPrime = 2;
 	number /= 2;
 	}
-	for (long long i = 3; i <= sqrt(number); i += 2)
+	for (i = 3; i <= sqrt(number); i += 2)
 	{
 	while (number % i == 0)
 	{
@@ -27,6 +28,6 @@ int main(void)
 	{
 	largestPrime = number;
 	}
-	printf("%lld\n", largestPrime);
+	printf("%ld\n", largestPrime);
 	return (0);
 }
