@@ -1,11 +1,11 @@
 #include "main.h"
 /**
- * _isupper - check the code.
+ * _isdigit - check the code.
  *@c: The loweer to checked
  * Return: Always 0.
  */
 
-int _isupper(int c)
+int _isdigit(int c)
 {
 	c = 0;
 	if (c <= 9)
