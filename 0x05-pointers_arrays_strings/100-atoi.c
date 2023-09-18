@@ -1,44 +1,38 @@
 #include "main.h"
 #include <stdio.h>
-#include <stdlib.h>
 /**
-* _atoi - integer is positive or negative
-* @s: first integer
-* Return: 0
-*/
+ * _atoi - convert string to integer
+ * @s: char pointer
+ * Return: 0
+ */
 int _atoi(char *s)
 {
+	int n, i, sign;
 
-	int result = 0;
-	int sign = 1;
-	int i = 0;
-	char *hasString = 0;
+	sign = 1;
 
-	while (s[i] == ' ')
+	i = n = 0;
+
+	while (((s[i] < '0') || s[i] > '9') && s[i] != 0)
 	{
+		if (s[i] == '-')
+			sign = sign * -1;
 		i++;
 	}
-	if (s[i] == '-')
+
+	while (((s[i] >= '0') && s[i] <= '9') && s[i] != 0)
 	{
-		sign = -1;
-		i++;
+		if (n >= 0)
+		{
+			b = n * 10 - (s[i] - '0');
+			i++;
+		}
+		else
+		{
+			n = n * 10 - (s[i] - '0');
+			i++;
+		}
 	}
-	else if (s[i] == '+')
-	{
-		i++;
-	}
-	while (s[i] >= '0' && s[i] <= '9')
-	{
-		result = result * 10 + (s[i] - '0');
-		i++;
-	}
-	if ((s[i] >= 'a' && s[i] <= 'z') || (s[i] >= 'A' && s[i] <= 'Z'))
-	{
-		*hasString = 1;
-	}
-	if (result == 0 && (s[i] < '0' || s[i] > '9'))
-	{
-		return (0);
-	}
-	return (sign * result);
+	sign = sign * -1;
+	return (n * sign);
 }
