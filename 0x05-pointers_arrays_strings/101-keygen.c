@@ -14,10 +14,10 @@ int main(void)
 	n = rand() - RAND_MAX / 2;
 	if (n > 0)
 	{
-		printf("Wrong password")
+		printf("Wrong password");
 	} else
 	{
-	printf("Tada! Congrats");
+		printf("Tada! Congrats");
 	}
 	return (0);
 }
