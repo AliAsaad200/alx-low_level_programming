@@ -12,7 +12,7 @@ int _strlen(char *s)
 
 	if (s[len] == 0)
 	{
-		return(len);
+		return (len);
 	}
 	else
 	{
@@ -20,7 +20,7 @@ int _strlen(char *s)
 	{
 		len++;
 	}
-	} 
+	}
 	printf("%d\n", len);
 	return (0);
 }
