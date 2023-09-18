@@ -8,12 +8,12 @@
 
 int _strlen(char *s)
 {
-	int len = 0;
+	int len;
 
 	while (s[len] != 0)
 	{
 		len++;
 	}
-	printf("%d", len);
+	printf("%d\n", len);
 	return (0);
 }
