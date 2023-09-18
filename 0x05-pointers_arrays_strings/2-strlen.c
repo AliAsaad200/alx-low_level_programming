@@ -10,17 +10,9 @@ int _strlen(char *s)
 {
 	int len = 0;
 
-	if (s[len] == 0)
-	{
-		return (len);
-	}
-	else
-	{
-		while (s[len] != '\0')
+	while (s[len] != '\0')
 	{
 		len++;
 	}
-	printf("%d\n", len);
-	}
-	return (0);
+	return (len);
 }
