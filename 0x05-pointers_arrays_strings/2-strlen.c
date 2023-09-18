@@ -15,11 +15,12 @@ int _strlen(char *s)
 	{
 		return (len);
 	}
-}	else
+	else
 	{
 		for (i = 0; i < *s; i++)
 		{
 			*s[i];
 		}
 	}
+}
 	
