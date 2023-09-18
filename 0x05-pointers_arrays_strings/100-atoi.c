@@ -8,9 +8,11 @@
 */
 int _atoi(char *s)
 {
+
 	int result = 0;
 	int sign = 1;
 	int i = 0;
+	*hasString = 0;
 
 	while (s[i] == ' ')
 	{
@@ -29,6 +31,10 @@ int _atoi(char *s)
 	{
 		result = result * 10 + (s[i] - '0');
 		i++;
+	}
+	if ((s[i] >= 'a' && s[i] <= 'z') || (s[i] >= 'A' && s[i] <= 'Z'))
+	{
+		*hasString = 1;
 	}
 	if (result == 0 && (s[i] < '0' || s[i] > '9'))
 	{
