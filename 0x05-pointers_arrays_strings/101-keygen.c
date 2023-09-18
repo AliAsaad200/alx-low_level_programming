@@ -1,30 +1,22 @@
+#include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include <stdio.h>
 /**
- * main - Entry point
- *
- * Return: Always 0 (Success)
+ * main - test
+ * Return: 0
  */
 int main(void)
 {
-	char password[100];
-	int i, length;
+	int res;
+	char c;
 
 	srand(time(NULL));
-	length = rand() % 9 + 6;
-	for (i = 0; i < length; i++)
+	while (res <= 2772)
 	{
-		int type = rand() % 3;
-
-	if (type == 0)
-		password[i] = 'a' + (rand() % 26);
-	else if (type == 1)
-		password[i] = 'A' + (rand() % 26);
-	else
-		password[i] = '0' + (rand() % 10);
+		c = rand() % 128;
+		res += c;
+		putchar(c);
 	}
-	password[i] = '\0';
-	printf("%s\n", password);
+	putchar(2772 - res);
 	return (0);
 }
