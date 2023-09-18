@@ -8,19 +8,9 @@
 
 int _strlen(char *s)
 {
-	int i;
-	int len = 0;
+	int len = _strlen(*s);
+	printf("%d\n" , len);
+	return(0);
 
-	if (*s == '\0')
-	{
-		return (len);
-	}
-	else
-	{
-		for (i = 0; i < *s; i++)
-		{
-			*s[i];
-		}
-	}
 }
 	
