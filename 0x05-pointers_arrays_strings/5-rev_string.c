@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 /**
-* print_rev - integer is positive or negative
+* rev_string - integer is positive or negative
 * @s: first integer
 * Return: 0
 */
