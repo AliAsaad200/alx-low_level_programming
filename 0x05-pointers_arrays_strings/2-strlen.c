@@ -8,5 +8,18 @@
 
 int _strlen(char *s)
 {
-	int len = strlen(*s);
-}
+	int i;
+	int len = 0;
+
+	if (*s == '\0')
+	{
+		return (len);
+	}
+}	else
+	{
+		for (i = 0; i < *s; i++)
+		{
+			*s[i];
+		}
+	}
+	
