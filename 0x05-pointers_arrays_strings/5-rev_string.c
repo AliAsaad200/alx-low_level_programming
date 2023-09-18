@@ -2,19 +2,19 @@
 #include <stdio.h>
 #include <string.h>
 /**
-* rev_string - integer is positive or negative
-* @s: first integer
-* Return: 0
-*/
+ * rev_string - Reverse a string in place.
+ * @s: The string to be reversed.
+ */
 void rev_string(char *s)
 {
-	int i;
 	int len = strlen(s);
-	int temp;
+	int i, j;
+	char temp;
 
-	for (i = len - 1; i >= 0; i--)
+	for (i = 0, j = len - 1; i < j; i++, j--)
 	{
-		temp = (s[i]);
+		temp = s[i];
+		s[i] = s[j];
+		s[j] = temp;
 	}
-	putchar ('\n');
 }
