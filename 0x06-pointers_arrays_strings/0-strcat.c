@@ -11,6 +11,5 @@
 char *_strcat(char *dest, char *src)
 {
 	strcat(src, dest);
-	printf('\n');
 	return (dest);
 }
