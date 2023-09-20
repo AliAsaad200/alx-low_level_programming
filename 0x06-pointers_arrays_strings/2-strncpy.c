@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 /**
-* _strncat - integer is positive or negative
+* _strncpy - integer is positive or negative
 * @src: first integer
 * @dest: first integer
 * @n: first integer
@@ -12,5 +12,5 @@
 char *_strncpy(char *dest, char *src, int n)
 {
 	strncpy(dest, src, n);
-	return(dest);
+	return (dest);
 }
