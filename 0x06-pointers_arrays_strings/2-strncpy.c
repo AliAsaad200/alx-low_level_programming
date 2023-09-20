@@ -11,6 +11,6 @@
 
 char *_strncpy(char *dest, char *src, int n)
 {
-	strncpy(src, dest, n);
+	strncpy(dest, src, n);
 	return(dest);
 }
