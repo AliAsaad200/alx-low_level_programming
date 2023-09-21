@@ -19,7 +19,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		;
 	if (we1 > size_r || w2 > size_r)
 		return (0);
-	carry = 0;
+	cary = 0;
 	for (we1 -= 1, w2 -= 1, res = 0; res < size_r - 1; we1--, w2--, res++)
 	{
 		sum = cary;
