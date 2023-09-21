@@ -10,18 +10,15 @@
 
 void reverse_array(int *a, int n)
 {
-	int len = sizeof(*a) / sizeof(a[0]);
-	int i;
+	int len = n - 1;
+	int i, j;
 	char temp;
 
-	for (i = 0, n = len - 1; i < n; i++, n--)
+	for (i = 0, j = len - 1; i < j; i++, j--)
 	{
-		temp = a[i];
-		a[i] = a[n];
-		a[n] = temp;
-		if (i != 0)
-		{
-			printf(", ");
-		}
+		temp = s[i];
+		s[i] = s[j];
+		s[j] = temp;
 	}
 }
+
