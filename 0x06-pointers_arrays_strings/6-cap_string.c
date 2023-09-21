@@ -11,7 +11,7 @@
 char *cap_string(char *s)
 {
 	int i;
-	int cap;
+	int cap = 1;
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
