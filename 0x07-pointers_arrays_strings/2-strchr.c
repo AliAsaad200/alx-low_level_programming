@@ -3,14 +3,14 @@
 #include <string.h>
 /**
 * _strchr - integer is positive or negative
-* @dest: first integer
-* @src: first integer
-* @n: first integer
+* @s: first integer
+* @c: first integer
 * Return: 0
 */
 
 char *_strchr(char *s, char c)
 {
-	char *value = strchr(s,c);
+	char *value = strchr(s, c);
+
 	return (value);
 }
