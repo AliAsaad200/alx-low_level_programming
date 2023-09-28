@@ -22,6 +22,6 @@ int _sqrt_recursion(int n)
 	else
 	{
 		res = (res + n / res) / 2;
-		return (n * _pow_recursion(n - 1));
+		return (n * _sqrt_recursion(n - 1));
 	}
 }
