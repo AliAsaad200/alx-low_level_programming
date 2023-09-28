@@ -8,19 +8,18 @@
  */
 int sqrt(int s, int r)
 {
-	int Result = r * r;
-
-	if (Result == s)
+	if ( s % 2 == 0)
 	{
-		return (r);
+		return (1);
 	}
-	else if (Result < s)
+	else if (s % s == 0 && s / 1 == 1)
 	{
-		return (Square(s, r + 1));
+		return (0);
+		
 	}
 	else
 	{
-		return (-1);
+		return (Square(s - 1));
 	}
 }
 /**
@@ -28,7 +27,7 @@ int sqrt(int s, int r)
  * @n: number
  * Return: 0
  */
-int _sqrt_recursion(int n)
+int is_prime_number(int n)
 {
-	return (sqrt(n, 1));
+	return (Square(n, 1));
 }
