@@ -18,7 +18,7 @@ int _pow_recursion(int x, int y)
 	}
 	else
 	{
-		 m = _pow_recursion(x * y);
+		 m = _pow_recursion(x, y);
 		printf("%d", m);
 		return(0);
 	}
