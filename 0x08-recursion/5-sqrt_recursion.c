@@ -16,7 +16,7 @@ int sqrt(int s, int r)
 	}
 	else if (Result < s)
 	{
-		return (Square(s, r + 1));
+		return (sqrt(s, r + 1));
 	}
 	else
 	{
