@@ -6,20 +6,19 @@
  * @r: number
  * Return: 0
  */
-int sqrt(int s, int r)
+int sqrt(int s)
 {
 	if ( s % 2 == 0)
 	{
-		return (1);
-	}
-	else if (s % s == 0 && s / 1 == 1)
-	{
 		return (0);
-		
+	}
+	else if (s % s == 0 && s / 1 == s)
+	{
+		return (1);
 	}
 	else
 	{
-		return (Square(s - 1));
+		return (sqrt(s - 1));
 	}
 }
 /**
@@ -29,5 +28,5 @@ int sqrt(int s, int r)
  */
 int is_prime_number(int n)
 {
-	return (Square(n, 1));
+	return (sqrt(n));
 }
