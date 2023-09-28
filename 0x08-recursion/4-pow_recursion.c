@@ -10,13 +10,15 @@
 */
 int _pow_recursion(int x, int y)
 {
+	int m = 1;
+
 	if (y < 0)
 	{
 		return (-1);
 	}
 	else
 	{
-		int m = m*x;
+		m = m*x;
 		printf("%d", m);
 		return(_pow_recursion(x , y));
 	}
