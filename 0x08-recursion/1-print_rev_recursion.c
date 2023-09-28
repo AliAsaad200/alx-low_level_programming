@@ -8,17 +8,10 @@
 */
 void _print_rev_recursion(char *s)
 {
-	int i = 0;
-	int j = 0;
-	char temp;
-
-	if (i >= j)
+	if (*s != '\0')
 	{
-		return;
+	_print_rev_recursion(s + 1);
+	printf("%c", *s);
 	}
-	temp = s[i];
-	s[i] = s[j];
-	s[j] = temp;
-	i++;
-	j--;
+
 }
