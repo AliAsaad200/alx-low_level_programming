@@ -8,7 +8,7 @@
  */
 int _sqrt(int s)
 {
-	if ( s % 2 == 0)
+	if (s <= 1)
 	{
 		return (0);
 	}
@@ -16,7 +16,7 @@ int _sqrt(int s)
 	{
 		return (1);
 	}
-	else if (s <= 1)
+	else if (s % 2 == 0)
 	{
 		return(0);
 	}
