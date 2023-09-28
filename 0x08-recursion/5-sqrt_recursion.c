@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * sqrt - _pow
+ * _sqrt - _pow
  * @s: number
  * @r: number
  * Return: 0
  */
-int sqrt(int s, int r)
+int _sqrt(int s, int r)
 {
 	int Result = r * r;
 
@@ -16,7 +16,7 @@ int sqrt(int s, int r)
 	}
 	else if (Result < s)
 	{
-		return (sqrt(s, r + 1));
+		return (_sqrt(s, r + 1));
 	}
 	else
 	{
@@ -30,5 +30,5 @@ int sqrt(int s, int r)
  */
 int _sqrt_recursion(int n)
 {
-	return (sqrt(n, 1));
+	return (_sqrt(n, 1));
 }
