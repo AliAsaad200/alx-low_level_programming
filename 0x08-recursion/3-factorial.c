@@ -20,5 +20,4 @@ int factorial(int n)
 	{
 		printf("%d", n + factorial(n - 1));
 	}
-	return (0);
 }
