@@ -3,7 +3,6 @@
 /**
  * _sqrt - _pow
  * @s: number
- * @r: number
  * Return: 0
  */
 int _sqrt(int s)
@@ -18,7 +17,7 @@ int _sqrt(int s)
 	}
 	else if (s % 2 == 0)
 	{
-		return(0);
+		return (0);
 	}
 	else
 	{
@@ -26,7 +25,7 @@ int _sqrt(int s)
 	}
 }
 /**
- * _sqrt_recursion - _pow
+ * is_prime_number - _pow
  * @n: number
  * Return: 0
  */
