@@ -1,24 +1,43 @@
 #include "main.h"
 #include <stdio.h>
+#include <stdbool.h>
 #include <string.h>
-
 /**
- * is_palindrome - Check if a string is a palindrome
- * @s: The input string
- * Return: 1 if the string is a palindrome, 0 otherwise
+ * pali - palindrome
+ * @s: type char pointer
+ * @i: type int
+ * @j: type int
+ * Return: 0
+ */
+bool pali(char *s, int i, int j)
+{
+	if (i >= j)
+	{
+		return (true);
+	}
+
+	if (s[i] != s[j])
+	{
+		return (false);
+	}
+
+	return (pali(s, i + 1, j - 1));
+}
+/**
+ * is_palindrome - function that returns 1 if a palindrome else 0
+ * @s: type char pointer
+ * Return: 0
  */
 int is_palindrome(char *s)
 {
-	int len = strlen(s);
+	int length;
 
-	if (len <= 1)
+	length = strlen(s);
+
+	if (length == 0)
 	{
-		return 1;
+		return (1);
 	}
-	if (s[0] != s[len - 1])
-	{
-		return 0;
-	}
-	s[len - 1] = '\0';
-	return is_palindrome(s + 1);
+
+	return (pali(s, 0, length - 1) ? 1 : 0);
 }
