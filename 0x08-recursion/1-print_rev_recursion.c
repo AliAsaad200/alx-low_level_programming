@@ -8,8 +8,8 @@
 */
 void _print_rev_recursion(char *s)
 {
-	int i;
-	int j;
+	int i = 0;
+	int j = 0;
 	char temp;
 
 	if (i >= j)
