@@ -23,6 +23,6 @@ int _sqrt_recursion(int n)
 	{
 		x = x + 1;
 		printf("%d", x);
-		return (0 + _sqrt_recursion(n - 1));
+		return (0);
 	}
 }
