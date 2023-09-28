@@ -24,6 +24,6 @@ int _pow_recursion(int x, int y)
 	{
 		m = m*x;
 		printf("%d", m);
-		return(_pow_recursion(x , y));
+		return(_pow_recursion(x , y - 1));
 	}
 }
