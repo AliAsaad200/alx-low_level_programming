@@ -16,7 +16,7 @@ int _pow_recursion(int x, int y)
 	}
 	else
 	{
-		pow(x, y);
+		printf("%d", pow(x, y))
 		return (0);
 	}
 }
