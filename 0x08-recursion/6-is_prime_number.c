@@ -6,7 +6,7 @@
  * @r: number
  * Return: 0
  */
-int sqrt(int s)
+int _sqrt(int s)
 {
 	if ( s % 2 == 0)
 	{
@@ -18,7 +18,7 @@ int sqrt(int s)
 	}
 	else
 	{
-		return (sqrt(s - 1));
+		return (_sqrt(s - 1));
 	}
 }
 /**
@@ -28,5 +28,5 @@ int sqrt(int s)
  */
 int is_prime_number(int n)
 {
-	return (sqrt(n));
+	return (_sqrt(n));
 }
