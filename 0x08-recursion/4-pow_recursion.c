@@ -1,6 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 #include <string.h>
+#include <math.h>
 /**
 * _pow_recursion - integer is positive or negative
 * @x: first integer
@@ -15,7 +16,7 @@ int _pow_recursion(int x, int y)
 	}
 	else
 	{
-		pow(x, y);
-		return (0);
+		
+		return (pow(x, y));
 	}
 }
