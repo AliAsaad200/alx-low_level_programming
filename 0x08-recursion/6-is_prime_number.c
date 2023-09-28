@@ -12,9 +12,13 @@ int _sqrt(int s)
 	{
 		return (0);
 	}
-	else if (s % s == 0 && s / 1 == s)
+	else if (s % s == 0)
 	{
 		return (1);
+	}
+	else if (s <= 1)
+	{
+		return(0);
 	}
 	else
 	{
