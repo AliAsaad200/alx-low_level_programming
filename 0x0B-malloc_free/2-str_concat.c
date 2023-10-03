@@ -4,10 +4,11 @@
 #include <string.h>
 /**
 * str_concat - integer is positive or negative
-* @str: first integer
+* @s1: first integer
+* @s2: first integer
 * Return: 0
 */
- char *str_concat(char *s1, char *s2)
+char *str_concat(char *s1, char *s2)
 {
 	char *p;
 	int len1;
@@ -23,15 +24,15 @@
 	{
 		s2 = "";
 	}
-	len1 = strlen(s1) + 1;
-	len2 = strlen(s2) + 1;
-	res = len1 + len2;
+	len1 = strlen(s1);
+	len2 = strlen(s2);
+	res = len1 + len2 + 1;
 	p = malloc(sizeof(char) * res);
 	if (p == NULL)
 	{
 		return (NULL);
 	}
-	strncat (p, s1, len1);
-	strncat (p, s2, len2);
+	strncat(p, s1, len1);
+	strncat(p, s2, len2);
 	return (p);
 }
