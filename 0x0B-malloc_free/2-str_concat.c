@@ -25,6 +25,10 @@
 		len2 = strlen(s2 +1);
 		res = len1 + len2;
 		p = malloc(sizeof(char) * res);
+		if (p == NULL)
+		{
+			return (NULL);
+		}
 		strcat (s1, s2);
 		printf ("%s", s1);
 		return (p);
