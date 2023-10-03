@@ -29,8 +29,8 @@
 		{
 			return (NULL);
 		}
-		strcat (s1, s2);
-		printf ("%s", s1);
+		strncat (s1, len1, p);
+		strncat (s2, len2, p);
 		return (p);
 	}
 }
