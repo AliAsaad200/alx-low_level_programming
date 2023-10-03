@@ -10,14 +10,17 @@
  char *str_concat(char *s1, char *s2)
 {
 
-	if (s == NULL)
+	if (s1 == NULL || s2 == NULL)
 	{
-		return (NULL);
+		return ("");
 
 	}
+	else
+	{
 	s1 = malloc(strlen(s1 + 1) + strlen(s2 + 1));
 	strcat (s1, s2);
 	printf ("%s", s1);
 	free (s1);
 	return (0);
+	}
 }
