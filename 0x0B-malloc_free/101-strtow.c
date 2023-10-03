@@ -19,6 +19,7 @@ int count_words(char *str) {
 
 char **strtow(char *str) {
 	int num_words;
+	int i;
 
     if (str == NULL || *str == '\0') {
         return NULL;
@@ -63,7 +64,6 @@ char **strtow(char *str) {
     }
 
     if (word_length > 0) {
-	int i;
 
         result[word_index] = (char *)malloc((word_length + 1) * sizeof(char));
         if (result[word_index] == NULL) {
@@ -79,5 +79,5 @@ char **strtow(char *str) {
         result[i][word_length] = '\0';
     }
 
-    return result;
+    return (result);
 }
