@@ -21,7 +21,6 @@
 		p = malloc(sizeof(char) * strlen(s1 + 1) + strlen(s2 + 1));
 		strcat (s1, s2);
 		printf ("%s", s1);
-		free (s1);
-		return (0);
+		return (p);
 	}
 }
