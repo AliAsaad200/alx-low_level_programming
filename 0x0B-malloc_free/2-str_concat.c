@@ -14,10 +14,14 @@
 	int len2;
 	int res;
 
-	if (s1 == NULL || s2 == NULL)
+	if (s1 == NULL)
 	{
 		return ("");
 
+	}
+	if (s2 == NULL)
+	{
+		return ("");
 	}
 	else
 	{
