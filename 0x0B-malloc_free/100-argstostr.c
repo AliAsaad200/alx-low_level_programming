@@ -3,7 +3,7 @@
  * argstostr - pointer
  * @ac: First Args
  * @av: Sec Args
- * Return: NULL
+ * Return: 1
  */
 char *argstostr(int ac, char **av)
 {
