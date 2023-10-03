@@ -1,83 +1,110 @@
 #include "main.h"
-#include <stdlib.h>
-#include <string.h>
 
-int count_words(char *str) {
-    int count = 0;
-    int is_word = 0;
+void myChars(char **, char *, int, int, int);
 
-    while (*str) {
-        if (*str == ' ') {
-            is_word = 0;
-        } else if (is_word == 0) {
-            is_word = 1;
-            count++;
-        }
-        str++;
-    }
+/**
+ * splitWords - Splits strings.
+ * @wordArray: store the split words.
+ * @inputString: split.
+ * Return: None.
+ */
+void splitWords(char **wordArray, char *inputString)
+{
+	int i, j, wordStart, isWord;
 
-    return count;
+	i = j = isWord = 0;
+
+	while (inputString[i])
+	{
+		if (isWord == 0 && inputString[i] != ' ')
+		{
+			wordStart = i;
+			isWord = 1;
+		}
+
+		if (i > 0 && inputString[i] == ' ' && inputString[i - 1] != ' ')
+		{
+			myChars(wordArray, inputString, wordStart, i, j);
+			j++;
+			isWord = 0;
+		}
+
+		i++;
+	}
+
+	if (isWord == 1)
+	{
+		myChars(wordArray, inputString, wordStart, i, j);
+	}
 }
+/**
+ * myChars - creates string.
+ * @words: insert to string.
+ * @str: work on it.
+ * @start: the start position.
+ * @end: the stop position.
+ * @index: where to start inserting the new word.
+ * Return: nothing.
+ */
+void myChars(char **words, char *str, int start, int end, int index)
+{
+	int i, j;
 
-char **strtow(char *str) {
-	int word_index = 0;
-	int word_length = 0;
-	int is_word = 0;
-	int num_words;
+	i = end - start;
+	words[index] = (char *)malloc(sizeof(char) * (i + 1));
+
+	for (j = 0; start < end; start++, j++)
+	{
+		words[index][j] = str[start];
+	}
+
+	words[index][j] = '\0';
+}
+/**
+ * strtow - Splits a string into words.
+ * @str: The string to split.
+ * Return: A pointer to the array of split words.
+ */
+char **strtow(char *str)
+{
+	int i, isWordStart, wordCount, wordLength;
 	char **words;
-	int i;
 
-    if (str == NULL || *str == '\0' || *str == ' ' ) {
-        return NULL;
-    }
+	if (str == NULL || str[0] == '\0' || (str[0] == ' ' && str[1] == '\0'))
+	{
+		return (NULL);
+	}
 
-    num_words = count_words(str);
-    words = (char **)malloc((num_words + 1) * sizeof(char *));
-    if (words == NULL) {
-        return NULL;
-    }
+	i = isWordStart = wordCount = wordLength = 0;
 
-    while (*str) {
-        if (*str == ' ') {
-            if (is_word) {
-                words[word_index] = (char *)malloc((word_length + 1) * sizeof(char));
-                if (words[word_index] == NULL) {
-                    for (i = 0; i < word_index; i++) {
-                        free(words[i]);
-                    }
-                    free(words);
-                    return NULL;
-                }
-                strncpy(words[word_index], str - word_length, word_length);
-                words[word_index][word_length] = '\0';
-                word_index++;
-                word_length = 0;
-                is_word = 0;
-            }
-        } else {
-            if (!is_word) {
-                is_word = 1;
-            }
-            word_length++;
-        }
-        str++;
-    }
+	while (str[i])
+	{
+		if (isWordStart == 0 && str[i] != ' ')
+			isWordStart = 1;
 
-    if (is_word) {
-        words[word_index] = (char *)malloc((word_length + 1) * sizeof(char));
-        if (words[word_index] == NULL) {
-            for (i = 0; i < word_index; i++) {
-                free(words[i]);
-            }
-            free(words);
-            return NULL;
-        }
-        strncpy(words[word_index], str - word_length, word_length);
-        words[word_index][word_length] = '\0';
-        word_index++;
-    }
+		if (i > 0 && str[i] == ' ' && str[i - 1] != ' ')
+		{
+			isWordStart = 0;
+			wordCount++;
+		}
+		i++;
+	}
 
-    words[word_index] = NULL;
+	wordCount += isWordStart == 1 ? 1 : 0;
 
-    return words;
+	if (wordCount == 0)
+	{
+		return (NULL);
+	}
+
+	words = (char **)malloc(sizeof(char *) * (wordCount + 1));
+
+	if (words == NULL)
+	{
+		return (NULL);
+	}
+
+	splitWords(words, str);
+	words[wordCount] = NULL;
+	return (words);
 }
