@@ -23,25 +23,26 @@ char **strtow(char *str) {
 	int word_index = 0;
 	int word_length = 0;
 	int is_word = 0;
+	int num_words;
+	char **words;
+	int i;
 
     if (str == NULL || *str == '\0') {
         return NULL;
     }
 
-    int num_words = count_words(str);
-    char **words = (char **)malloc((num_words + 1) * sizeof(char *));
+    num_words = count_words(str);
+    words = (char **)malloc((num_words + 1) * sizeof(char *));
     if (words == NULL) {
         return NULL;
     }
 
-    
     while (*str) {
         if (*str == ' ') {
             if (is_word) {
                 words[word_index] = (char *)malloc((word_length + 1) * sizeof(char));
                 if (words[word_index] == NULL) {
-                    // Free memory allocated so far
-                    for (int i = 0; i < word_index; i++) {
+                    for (i = 0; i < word_index; i++) {
                         free(words[i]);
                     }
                     free(words);
@@ -65,8 +66,7 @@ char **strtow(char *str) {
     if (is_word) {
         words[word_index] = (char *)malloc((word_length + 1) * sizeof(char));
         if (words[word_index] == NULL) {
-            // Free memory allocated so far
-            for (int i = 0; i < word_index; i++) {
+            for (i = 0; i < word_index; i++) {
                 free(words[i]);
             }
             free(words);
