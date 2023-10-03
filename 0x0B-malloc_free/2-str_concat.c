@@ -19,7 +19,7 @@
 	{
 		s1 = malloc(strlen(s1 + 1) + strlen(s2 + 1));
 		strcat (s1, s2);
-		printf ("%s", s1);
+		printf ("%s %s", s1, s2);
 		free (s1);
 		return (0);
 	}
