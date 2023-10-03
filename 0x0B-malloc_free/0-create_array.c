@@ -9,6 +9,9 @@
 */
 char *create_array(unsigned int size, char c)
 {
+	char *f = 0;
+	unsigned int i;
+
 	if (size == 0)
 	{
 		return (NULL);
@@ -16,7 +19,12 @@ char *create_array(unsigned int size, char c)
 	}
 	else
 	{
-		c = malloc(size);
+		 f = malloc(size * sizeof(char));
+		for (i = 0; i < size; i++)
+		{
+			f[i] = c;
+		}
 	}
-	free(size);
+	free(f);
+	return (0);
 }
