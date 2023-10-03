@@ -21,6 +21,8 @@ char **strtow(char *str) {
 	int num_words;
 	int i;
 	char **result;
+	int word_length;
+	int word_index;
 
     if (str == NULL || *str == '\0') {
         return NULL;
@@ -35,9 +37,8 @@ char **strtow(char *str) {
     if (result == NULL) {
         return NULL;
     }
-
-    int word_length = 0;
-    int word_index = 0;
+	word_length = 0;
+	word_index = 0;
 
     while (*str) {
         if (*str == ' ') {
