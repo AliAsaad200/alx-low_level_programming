@@ -21,8 +21,8 @@
 	}
 	else
 	{
-		len1 = strlen(s1 +1);
-		len2 = strlen(s2 +1);
+		len1 = strlen(s1 + 1);
+		len2 = strlen(s2 + 1);
 		res = len1 + len2;
 		p = malloc(sizeof(char) * res);
 		if (p == NULL)
