@@ -43,8 +43,6 @@ char *argstostr(int ac, char **av)
 			current_position++;
 		}
 	}
-
 	ptr[current_position] = '\0';
-
 	return (ptr);
 }
