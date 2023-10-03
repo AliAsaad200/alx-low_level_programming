@@ -40,7 +40,9 @@ char **strtow(char *str) {
             if (word_length > 0) {
                 result[word_index] = (char *)malloc((word_length + 1) * sizeof(char));
                 if (result[word_index] == NULL) {
-                    for (int i = 0; i < word_index; i++) {
+			int i;
+
+                    for (i = 0; i < word_index; i++) {
                         free(result[i]);
                     }
                     free(result);
@@ -59,17 +61,20 @@ char **strtow(char *str) {
     }
 
     if (word_length > 0) {
+	int i;
+
         result[word_index] = (char *)malloc((word_length + 1) * sizeof(char));
         if (result[word_index] == NULL) {
-            for (int i = 0; i < word_index; i++) {
+            for (i = 0; i < word_index; i++) {
                 free(result[i]);
             }
             free(result);
             return NULL;
         }
     }
+	int i;
 
-    for (int i = 0; i <= num_words; i++) {
+    for (i = 0; i <= num_words; i++) {
         result[i][word_length] = '\0';
     }
 
