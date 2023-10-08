@@ -23,7 +23,7 @@
 	p = malloc(res + 1);
 	if (s1 != NULL)
         strcpy(p, s1);
-    else
+	else
         *p = '\0';
 	if (p == NULL)
 	{
