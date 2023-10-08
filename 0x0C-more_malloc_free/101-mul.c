@@ -1,56 +1,85 @@
 #include "main.h"
+
 /**
-* _realloc - integer is positive or negative
-* @ptr: first integer
-* @old_size: first integer
-* @new_size: first integer
-* Return: 0
-**/
-int multiply(const char *num1, const char *num2)
+ * big_multiply - multiply two big number strings
+ * @s1: the first big number string
+ * @s2: the second big number string
+ *
+ * Return: the product big number string
+ */
+char *big_multiply(char *s1, char *s2)
 {
-	int result;
-	if (sscanf(num1, "%d", &result) != 1 || sscanf(num2, "%d", &result) != 1)
+	char *r;
+	int l1, l2, a, b, c, x;
+
+	l1 = strlen(s1);
+	l2 = strlen(s2);
+	r = malloc(a = x = l1 + l2);
+	if (!r)
+		printf("Error\n"), exit(98);
+	while (a--)
+		r[a] = 0;
+
+	for (l1--; l1 >= 0; l1--)
 	{
-		return (-1);
+		if (!isdigit(s1[l1]))
+		{
+			free(r);
+			printf("Error\n"), exit(98);
+		}
+		a = s1[l1] - '0';
+		c = 0;
+
+		for (l2 = strlen(s2) - 1; l2 >= 0; l2--)
+		{
+			if (!isdigit(s2[l2]))
+			{
+				free(r);
+				printf("Error\n"), exit(98);
+			}
+			b = s2[l2] - '0';
+
+			c += r[l1 + l2 + 1] + (a * b);
+			r[l1 + l2 + 1] = c % 10;
+
+			c /= 10;
+		}
+		if (c)
+			r[l1 + l2 + 1] += c;
 	}
-	return atoi(num1) * atoi(num2);
+	return (r);
 }
-int main(int argc, char *argv[])
+
+/**
+ * main - multiply two big number strings
+ * @argc: the number of arguments
+ * @argv: the argument vector
+ *
+ * Return: Always 0 on success.
+ */
+int main(int argc, char **argv)
 {
-	char *num1;
-	char *num2;
-	int result;
-	int i;
+	char *r;
+	int a, c, x;
 
 	if (argc != 3)
+		printf("Error\n"), exit(98);
+
+	x = strlen(argv[1]) + strlen(argv[2]);
+	r = big_multiply(argv[1], argv[2]);
+	c = 0;
+	a = 0;
+	while (c < x)
 	{
-		printf("Error\n");
-		return (98);
+		if (r[c])
+			a = 1;
+		if (a)
+			putchar(r[c] + '0');
+		c++;
 	}
-	num1 = argv[1];
-	num2 = argv[2];
-	for (i = 0; num1[i] != '\0'; i++)
-	{
-		if (!isdigit(num1[i]))
-		{
-        		printf("Error\n");
-			return (98);
-		}
-	}
-	for (i = 0; num2[i] != '\0'; i++)
-	{
-		if (!isdigit(num2[i]))
-		{
-			printf("Error\n");
-			return (98);
-		}
-	}
-	result = multiply(num1, num2);
-	if (result == -1)
-	{
-		printf("Error\n");
-		return (98);
-	}
-	printf("%d\n", result);
+	if (!a)
+		putchar('0');
+	putchar('\n');
+	free(r);
 	return (0);
 }
