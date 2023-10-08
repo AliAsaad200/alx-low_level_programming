@@ -1,6 +1,6 @@
 #include "main.h"
 /**
-* string_nconcat - integer is positive or negative
+* _calloc - integer is positive or negative
 * @nmemb: first integer
 * @size: first integer
 * Return: 0
