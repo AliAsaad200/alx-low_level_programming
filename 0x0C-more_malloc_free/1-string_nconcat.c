@@ -9,7 +9,6 @@
 {
 	char *p;
 	int len1;
-	int i;
 
 	len1 = sizeof(char) + 1;
 	p = malloc(len1 + n);
@@ -17,9 +16,6 @@
 	{
 		exit(' ');
 	}
-	for(i = 0; i < len1; i++)
-	{
 		p = strncat(s1, s2, n);
-	}
 	return (p);
 }
