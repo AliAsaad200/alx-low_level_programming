@@ -15,7 +15,7 @@
 	p = malloc(len1 + n);
 	if (p == NULL)
 	{
-		exit('');
+		exit(' ');
 	}
 	for(i = 0; i < len1; i++)
 	{
