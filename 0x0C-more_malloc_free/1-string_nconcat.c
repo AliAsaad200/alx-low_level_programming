@@ -21,14 +21,14 @@
 	else
 		res = len1 + n;
 	p = malloc(res + 1);
-	if (s1 != NULL)
-        strcpy(p, s1);
-	else
-        *p = '\0';
 	if (p == NULL)
 	{
 		exit(98);
 	}
+	if (s1 != NULL)
+        strcpy(p, s1);
+	else
+        *p = '\0';
 	strncat(p, s2, n);
 	return (p);
 }
