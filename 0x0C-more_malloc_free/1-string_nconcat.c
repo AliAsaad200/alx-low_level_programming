@@ -27,7 +27,7 @@
         *p = '\0';
 	if (p == NULL)
 	{
-		exit(' ');
+		exit(98);
 	}
 	strncat(p, s2, n);
 	return (p);
