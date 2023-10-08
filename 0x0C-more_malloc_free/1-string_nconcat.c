@@ -21,6 +21,10 @@
 	else
 		res = len1 + n;
 	p = malloc(res + 1);
+	if (p == NULL)
+	{
+		exit(98);
+	}
 	if (s1 != NULL)
         strcpy(p, s1);
 	else
