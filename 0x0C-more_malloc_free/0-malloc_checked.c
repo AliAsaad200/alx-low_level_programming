@@ -15,5 +15,5 @@ void *malloc_checked(unsigned int b)
 
 	}
 	printf("%s", p);
-	return(0);
+	return (0);
 }
