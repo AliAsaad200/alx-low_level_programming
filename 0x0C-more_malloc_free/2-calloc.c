@@ -8,16 +8,16 @@
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	char *p;
-	int i;
 
 	if (nmemb == 0 || size == 0)
 	{
-		exit(NULL);
+		return (NULL);
 	}
 	p = malloc(nmemb * size);
 	if(p == NULL)
 	{
-		exit(NULL);
+		return (NULL);
 	}
+	memset(p, 0, nmemb * size);
 	return (p);
 }
