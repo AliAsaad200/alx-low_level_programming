@@ -6,12 +6,18 @@
 */
 void *malloc_checked(unsigned int b)
 {
-	unsigned int *p = 0;
+	char *p;
 
+	p = malloc(sizeof(int) * b);
 	if (p == NULL)
 	{
-		return ('98');
+		printf("%d", 98);
 
 	}
-	p = malloc(sizeof(int) * b);
+	else
+	{
+	printf("%s", p);
+	free(p);
+	}
+	return(p);
 }
