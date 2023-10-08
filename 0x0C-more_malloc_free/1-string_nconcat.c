@@ -19,7 +19,7 @@
 	}
 	for(i = 0; i < len1; i++)
 	{
-		p[i] = strncat(s1, s2, n);
+		p = strncat(s1, s2, n);
 	}
-	return (p[i]);
+	return (p);
 }
