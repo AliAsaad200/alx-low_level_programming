@@ -11,9 +11,8 @@ void *malloc_checked(unsigned int b)
 	p = malloc(sizeof(int) * b);
 	if (p == NULL)
 	{
-		printf("%d", 98);
+		exit(98);
 
 	}
-	printf("%s", p);
-	return (0);
+	return (p);
 }
