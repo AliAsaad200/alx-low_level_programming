@@ -27,9 +27,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		exit(98);
 	}
 	if (s1 != NULL)
-	{
 		strcpy(p, s1);
-	}
 	else
 	{
 		*p = '\0';
