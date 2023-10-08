@@ -9,7 +9,7 @@
 {
 	char *p;
 	int len1;
-	int len2;
+	unsigned int len2;
 	int res;
 
 	len1 = strlen(s1);
