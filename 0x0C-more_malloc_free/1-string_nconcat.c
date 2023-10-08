@@ -9,9 +9,18 @@
 {
 	char *p;
 	int len1;
+	int len2;
+	int res;
 
-	len1 = sizeof(char) + 1;
-	p = malloc(len1 + n);
+	len1 = strlen(s1);
+	len2 = strlen(s2);
+	if(n >= len2)
+	{
+		res = len1 + len2;
+	}
+	else
+		res = len1 + n;
+	p = malloc(res + 1);
 	if (p == NULL)
 	{
 		exit(' ');
