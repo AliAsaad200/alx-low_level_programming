@@ -8,27 +8,20 @@
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	char *p;
-	unsigned int len1;
-	unsigned int len2;
-	unsigned int res;
+	int i;
 
-	len1 = strlen(s1);
-	len2 = strlen(s2);
-	if (n >= len2)
+	if (nmemb == 0 || size == 0)
 	{
-		res = len1 + len2;
+		exit(NULL);
 	}
-	else
-		res = len1 + n;
-	p = malloc(res + 1);
-	if (p == NULL)
+	p = malloc(size);
+	if(p == NULL)
 	{
-		exit(98);
+		exit(NULL);
 	}
-	if (s1 != NULL)
-		strcpy(p, s1);
-	else
-		*p = '\0';
-	strncat(p, s2, n);
+	for(i = 0; nmemb != NULL; i++)
+	{
+		p[i] = nmemb;
+	}
 	return (p);
 }
