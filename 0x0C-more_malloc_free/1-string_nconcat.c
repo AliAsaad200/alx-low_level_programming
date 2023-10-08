@@ -1,41 +1,44 @@
 #include "main.h"
 /**
-* string_nconcat - integer is positive or negative
-* @s1: first integer
-* @s2: first integer
-* @n: first integer
-* Return: 0
-**/
+ * string_nconcat - function that concatenates two strings
+ * @s1: type char pointer
+ * @s2: type char pointer
+ * @n: type unsigned int
+ * Return: pointer to the allocated memory
+ */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *p;
-	unsigned int len1;
-	unsigned int len2;
-	unsigned int res;
+	unsigned int len;
+	unsigned int i;
+	unsigned int j;
 
-	if (s1 == NULL || s2 == NULL)
-	{
-		exit(98);
-	}
-	len1 = strlen(s1);
-	len2 = strlen(s2);
-	if (n >= len2)
-	{
-		res = len1 + len2;
-	}
-	else
-		res = len1 + n;
-	p = malloc(res + 1);
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
+
+	len = strlen(s1);
+	p = malloc(sizeof(char) * (len + n + 1));
+
 	if (p == NULL)
 	{
-		exit(98);
+		return (NULL);
 	}
-	if (s1 != NULL)
-		strcpy(p, s1);
-	else
+
+	for (j = 0, i = 0; j < (len + n); j++)
 	{
-		*p = '\0';
+		if (j < len)
+		{
+			*(p + j) = *(s1 + j);
+		}
+		else
+		{
+			*(p + j) = *(s2 + i);
+			i++;
+		}
 	}
-	strncat(p, s2, n);
+
+	*(p + j) = '\0';
 	return (p);
 }
