@@ -12,8 +12,8 @@
 	unsigned int len2;
 	int res;
 
-	len1 = strlen(s1);
-	len2 = strlen(s2);
+	len1 = (s1 != NULL) ? strlen(s1) : 0;
+	len2 = (s2 != NULL) ? strlen(s2) : 0;
 	if(n >= len2)
 	{
 		res = len1 + len2;
