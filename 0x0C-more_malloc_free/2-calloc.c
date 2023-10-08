@@ -1,12 +1,11 @@
 #include "main.h"
 /**
 * string_nconcat - integer is positive or negative
-* @s1: first integer
-* @s2: first integer
-* @n: first integer
+* @nmemb: first integer
+* @size: first integer
 * Return: 0
 **/
-char *string_nconcat(char *s1, char *s2, unsigned int n)
+void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	char *p;
 	unsigned int len1;
@@ -27,13 +26,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		exit(98);
 	}
 	if (s1 != NULL)
-	{
 		strcpy(p, s1);
-	}
 	else
-	{
 		*p = '\0';
-	}
 	strncat(p, s2, n);
 	return (p);
 }
