@@ -8,12 +8,12 @@
 */char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *p;
-	int len1;
+	unsigned int len1;
 	unsigned int len2;
-	int res;
+	unsigned int res;
 
-	len1 = (s1 != NULL) ? strlen(s1) : 0;
-	len2 = (s2 != NULL) ? strlen(s2) : 0;
+	len1 = strlen(s1);
+	len2 = strlen(s2);
 	if(n >= len2)
 	{
 		res = len1 + len2;
@@ -21,10 +21,6 @@
 	else
 		res = len1 + n;
 	p = malloc(res + 1);
-	if (p == NULL)
-	{
-		exit(98);
-	}
 	if (s1 != NULL)
         strcpy(p, s1);
 	else
