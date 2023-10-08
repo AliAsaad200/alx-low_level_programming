@@ -14,5 +14,5 @@ void *malloc_checked(unsigned int b)
 		printf("%d", 98);
 
 	}
-	return(p);
+	return(0);
 }
