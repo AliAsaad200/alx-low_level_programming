@@ -1,14 +1,15 @@
-#include "main.h"
+#include "function_pointers.h"
+#include <stdio.h>
 /**
- * array_iterator - prints number of arguments passed
- * @array: tye int argument
- * @action: type char argument of strings
- * @size: type char argument of strings
- * Return: 0
+ * array_iterator - prints each array elem on a newl
+ * @array: array
+ * @size: how many elem to print
+ * @action: pointer to print in regular or hex
+ * Return: void
  */
 void array_iterator(int *array, size_t size, void (*action)(int))
 {
-	 size_t i;
+	unsigned int i;
 
 	if (array == NULL || action == NULL)
 		return;
@@ -17,14 +18,4 @@ void array_iterator(int *array, size_t size, void (*action)(int))
 	{
 		action(array[i]);
 	}
-}
- /** print_elem - prints number of arguments passed*/
-void print_elem(int elem)
-{
-	printf("%d\n", elem);
-}
- /** print_elem_hex - prints number of arguments passed*/
-void print_elem_hex(int elem)
-{
-	printf("0x%x\n", elem);
 }
