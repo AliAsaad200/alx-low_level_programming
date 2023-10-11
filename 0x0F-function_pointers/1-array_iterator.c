@@ -10,20 +10,21 @@ void array_iterator(int *array, size_t size, void (*action)(int))
 {
 	 size_t i;
 
-    if (array == NULL || action == NULL)
-        return;
+	if (array == NULL || action == NULL)
+		return;
 
-    for (i = 0; i < size; i++)
-    {
-        action(array[i]);
-    }
+	for (i = 0; i < size; i++)
+	{
+		action(array[i]);
+	}
 }
-
+ /** print_elem - prints number of arguments passed*/
 void print_elem(int elem)
 {
-    printf("%d\n", elem);
+	printf("%d\n", elem);
 }
+ /** print_elem_hex - prints number of arguments passed*/
 void print_elem_hex(int elem)
 {
-    printf("0x%x\n", elem);
+	printf("0x%x\n", elem);
 }
