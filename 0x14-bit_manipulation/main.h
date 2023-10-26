@@ -9,7 +9,7 @@ int clear_bit(unsigned long int *n, unsigned int index);
 unsigned int flip_bits(unsigned long int n, unsigned long int m);
 int get_endianness(void);
 #endif
-_putchar.c
+_putchar
 #include <unistd.h>
 /**
  * _putchar - writes the character c to stdout
